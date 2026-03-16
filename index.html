@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WDD231 | Harry Quimbay</title>
+<meta name="description" content="WDD231 Course Home Page">
+<meta name="author" content="Harry Quimbay">
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Slabo+27px&display=swap" rel="stylesheet">
+
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/course.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-title">
+<img src="images/exchange_logo.svg" alt="Quimbay City Chamber of Commerce" class="logo">
+<span>Quimbay City Chamber of Commerce</span>
+</div>
+
+<button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+</header>
+
+<nav id="nav-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="chamber/index.html">Chamber</a>
+    <a href="final/index.html">Final</a>
+</nav>
+
+<main>
+
+<h1>Home</h1>
+
+<section>
+<h2>About</h2>
+<p>Harry Quimbay | WDD231 Course Home Page</p>
+</section>
+
+<section>
+
+<h2>Web and Computer Programming Certificate</h2>
+
+<div class="filters">
+<button id="all">All Courses</button>
+<button id="wdd">WDD Courses</button>
+<button id="cse">CSE Courses</button>
+</div>
+
+<div id="course-container"></div>
+
+<p>Total Credits: <span id="total-credits"></span></p>
+
+</section>
+
+<section>
+
+<h2>Projects</h2>
+<p>Use the navigation above to visit the Chamber and Final projects.</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="social">
+
+<a href="https://github.com/yourusername" aria-label="Visit my GitHub profile">GitHub</a>
+<a href="https://www.linkedin.com/in/yourprofile" aria-label="Visit my LinkedIn profile">LinkedIn</a>
+<a href="https://twitter.com/yourprofile" aria-label="Visit my Twitter profile">Twitter</a>
+
+</div>
+
+<p>© <span id="year"></span> Harry Quimbay | Colombia</p>
+
+<p id="lastModified"></p>
+
+</footer>
+
+</body>
+</html>

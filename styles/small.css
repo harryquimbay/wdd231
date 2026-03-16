@@ -1,0 +1,164 @@
+:root {
+
+--primary-color: #2ca9bc;
+--secondary-color: #a9ddd6;
+--dark-color: #000000;
+
+--white: #ffffff;
+--light-gray: #f4f4f4;
+--medium-gray: #6b6b6b;
+--dark-gray: #333333;
+
+--background-light: #ffffff;
+--background-soft: #f4f4f4;
+--background-accent: #a9ddd6;
+
+--text-primary: #000000;
+--text-secondary: #333333;
+--text-light: #ffffff;
+
+--button-primary: #2ca9bc;
+--button-hover: #2393a3;
+
+--border-color: #dddddd;
+
+}
+
+
+body {
+font-family: "Montserrat", sans-serif;
+margin: 0;
+background: var(--background-light);
+color: var(--text-primary);
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+background: var(--secondary-color);
+color: white;
+}
+
+.logo-title {
+display: flex;
+align-items: center;
+gap: 10px;
+font-family: "Slabo 27px", serif;
+}
+
+.logo-title span {
+color: var(--text-primary);
+font-weight: 600;
+}
+
+.logo {
+width: 40px;
+}
+
+#menu {
+font-size: 1.5rem;
+background: none;
+border: none;
+color: white;
+cursor: pointer;
+}
+
+nav {
+display: none;
+flex-direction: column;
+background: var(--primary-color);
+}
+
+.open {
+display: flex;
+}
+
+nav a {
+padding: 1rem;
+text-decoration: none;
+color: black;
+}
+
+nav a.active {
+    background: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+nav a:hover {
+background: var(--primary-color);
+color: white;
+}
+
+.open {
+display: flex;
+}
+
+main {
+padding: 1rem;
+}
+
+section {
+margin-bottom: 2rem;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.filters button {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background: var(--primary-color);
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.filters button:hover {
+background: var(--button-hover);
+}
+
+.course-card {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--white);
+}
+
+.completed {
+background: var(--secondary-color);
+}
+
+#course-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+footer {
+text-align: center;
+padding: 1rem;
+background: var(--dark-gray);
+color: white;
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+
+.social a {
+margin: 0 .5rem;
+color: white;
+text-decoration: none;
+}
