@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Quimbay Coffee Roasters",
+        "address": "12 Central Ave, Quimbay",
+        "phone": "+57 300 111 1111",
+        "website": "https://example.com",
+        "image": "images/business1.webp",
+        "membership": 3,
+        "description": "Specialty coffee and local roasting services."
+    },
+    {
+        "name": "Andes Travel Group",
+        "address": "45 Plaza Road, Quimbay",
+        "phone": "+57 300 222 2222",
+        "website": "https://example.com",
+        "image": "images/business2.webp",
+        "membership": 2,
+        "description": "Regional tourism and travel planning."
+    },
+    {
+        "name": "Quimbay Tech Solutions",
+        "address": "8 Innovation Street, Quimbay",
+        "phone": "+57 300 333 3333",
+        "website": "https://example.com",
+        "image": "images/business3.webp",
+        "membership": 3,
+        "description": "IT support and digital business services."
+    },
+    {
+        "name": "Green Valley Market",
+        "address": "22 Market Lane, Quimbay",
+        "phone": "+57 300 444 4444",
+        "website": "https://example.com",
+        "image": "images/business4.webp",
+        "membership": 1,
+        "description": "Fresh produce and local products."
+    },
+    {
+        "name": "Riverstone Legal Group",
+        "address": "17 Civic Center, Quimbay",
+        "phone": "+57 300 555 5555",
+        "website": "https://example.com",
+        "image": "images/business5.webp",
+        "membership": 2,
+        "description": "Legal services for businesses and residents."
+    },
+    {
+        "name": "Summit Fitness Club",
+        "address": "30 Wellness Blvd, Quimbay",
+        "phone": "+57 300 666 6666",
+        "website": "https://example.com",
+        "image": "images/business6.webp",
+        "membership": 1,
+        "description": "Fitness center and wellness coaching."
+    },
+    {
+        "name": "Quimbay Event Studio",
+        "address": "51 Celebration Way, Quimbay",
+        "phone": "+57 300 777 7777",
+        "website": "https://example.com",
+        "image": "images/business7.webp",
+        "membership": 2,
+        "description": "Event planning and venue styling."
+    }
+]
