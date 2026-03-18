@@ -1,10 +1,10 @@
 [
     {
-        "name": "Quimbay Coffee Roasters",
-        "address": "12 Central Ave, Quimbay",
+        "name": "Coffee Roasters",
+        "address": "12 Central Ave",
         "phone": "+57 300 111 1111",
         "website": "https://example.com",
-        "image": "images/business1.webp",
+        "image": "chamber/images/logo_coffe.webp",
         "membership": 3,
         "description": "Specialty coffee and local roasting services."
     },
