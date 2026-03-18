@@ -4,43 +4,43 @@
         "address": "12 Central Ave",
         "phone": "+57 300 111 1111",
         "website": "https://example.com",
-        "image": "chamber/images/logo_coffe.webp",
+        "image": "images/logo_coffee.webp",
         "membership": 3,
         "description": "Specialty coffee and local roasting services."
     },
     {
         "name": "Andes Travel Group",
-        "address": "45 Plaza Road, Quimbay",
+        "address": "45 Plaza Road",
         "phone": "+57 300 222 2222",
         "website": "https://example.com",
-        "image": "images/business2.webp",
+        "image": "images/logo_andes.webp",
         "membership": 2,
         "description": "Regional tourism and travel planning."
     },
     {
-        "name": "Quimbay Tech Solutions",
-        "address": "8 Innovation Street, Quimbay",
+        "name": "Tech Solutions",
+        "address": "8 Innovation Street",
         "phone": "+57 300 333 3333",
         "website": "https://example.com",
-        "image": "images/business3.webp",
+        "image": "images/logo_tech.webp",
         "membership": 3,
         "description": "IT support and digital business services."
     },
     {
         "name": "Green Valley Market",
-        "address": "22 Market Lane, Quimbay",
+        "address": "22 Market Lane",
         "phone": "+57 300 444 4444",
         "website": "https://example.com",
-        "image": "images/business4.webp",
+        "image": "images/logo_greenvalley.webp",
         "membership": 1,
         "description": "Fresh produce and local products."
     },
     {
         "name": "Riverstone Legal Group",
-        "address": "17 Civic Center, Quimbay",
+        "address": "17 Civic Center",
         "phone": "+57 300 555 5555",
         "website": "https://example.com",
-        "image": "images/business5.webp",
+        "image": "images/logo_riverstone.webp",
         "membership": 2,
         "description": "Legal services for businesses and residents."
     },
@@ -49,16 +49,16 @@
         "address": "30 Wellness Blvd, Quimbay",
         "phone": "+57 300 666 6666",
         "website": "https://example.com",
-        "image": "images/business6.webp",
+        "image": "images/logo_summit.webp",
         "membership": 1,
         "description": "Fitness center and wellness coaching."
     },
     {
-        "name": "Quimbay Event Studio",
+        "name": "Kings Event Studio",
         "address": "51 Celebration Way, Quimbay",
         "phone": "+57 300 777 7777",
         "website": "https://example.com",
-        "image": "images/business7.webp",
+        "image": "images/logo_kings.webp",
         "membership": 2,
         "description": "Event planning and venue styling."
     }
