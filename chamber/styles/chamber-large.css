@@ -1,0 +1,49 @@
+@media (min-width: 700px) {
+    #menuButton {
+        display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    grid-column: auto;
+}
+
+nav a {
+    border-top: none;
+    border-radius: 10px;
+}
+
+.members-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-top {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    header {
+        grid-template-columns: auto 1fr;
+}
+
+.members-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.members-list .member-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.members-list .member-card img {
+    width: 140px;
+    height: 140px;
+    margin: 0;
+    }
+}
