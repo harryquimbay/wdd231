@@ -1,93 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Harry Quimbay - WDD231 Course Home Page" />
+    <meta name="author" content="Harry Quimbay" />
+    <title>WDD231 Home</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Slabo+27px&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-<title>WDD231 | Harry Quimbay</title>
-<meta name="description" content="WDD231 Course Home Page">
-<meta name="author" content="Harry Quimbay">
-
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Slabo+27px&display=swap" rel="stylesheet">
-
-<script src="scripts/navigation.js" defer></script>
-<script src="scripts/date.js" defer></script>
-<script src="scripts/course.js" defer></script>
-
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
 
 <header>
+    <div class="brand">
+        <img src="images/codigo.svg" alt="Site logo" width="40" height="40">
+        <span>Harry Quimbay</span>
+    </div>
 
-<div class="logo-title">
-<img src="chambre/images/exchange_logo.svg" alt="Quimbay City Chamber of Commerce" class="logo">
-<span>Quimbay City Chamber of Commerce</span>
-</div>
+    <button id="menuButton"></button>
 
-<button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
-
+    <nav id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="chamber/index.html">Chamber</a>
+        <a href="final/index.html">Final</a>
+    </nav>
 </header>
 
-<nav id="nav-menu">
-    <a href="index.html" class="active">Home</a>
-    <a href="chamber/index.html">Chamber</a>
-    <a href="final/index.html">Final</a>
-</nav>
-
 <main>
+    <h1>Home</h1>
 
-<h1>Home</h1>
+    <!-- Section 1 -->
+    <section>
+        <h2>Certificate Overview</h2>
+        <p>
+            This page show my improvemnt during my development studies.
+        </p>
+    </section>
 
-<section>
-<h2>About</h2>
-<p>Harry Quimbay | WDD231 Course Home Page</p>
-</section>
+    <!-- Section 2 -->
+    <section>
+        <h2>Technical Skills</h2>
+        <p>
+            HTML, CSS, JavaScript.
+        </p>
+    </section>
 
-<section>
+    <section class="certificate-section">
+        <h2>Web and Computer Programming Certificate</h2>
 
-<h2>Web and Computer Programming Certificate</h2>
+        <div class="certificate-content">
 
-<div class="filters">
-<button id="all">All Courses</button>
-<button id="wdd">WDD Courses</button>
-<button id="cse">CSE Courses</button>
-</div>
+            <div class="filters">
+                <button id="allBtn">All Courses</button>
+                <button id="wddBtn">WDD Courses</button>
+                <button id="cseBtn">CSE Courses</button>
+            </div>
 
-<div id="course-container"></div>
+            <p id="totalCredits" class="credits"></p>
 
-<p>Total Credits: <span id="total-credits"></span></p>
+            <div id="courseContainer" class="course-grid"></div>
 
-</section>
-
-<section>
-
-<h2>Projects</h2>
-<p>Use the navigation above to visit the Chamber and Final projects.</p>
-
-</section>
-
+        </div>
+    </section>
 </main>
 
 <footer>
+    <div class="socials">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/harry-quimbay-37b5351aa" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
+    </div>
 
-<div class="social">
-
-<a href="https://github.com/harryquimbay/wdd231.git" aria-label="Visit my GitHub profile">GitHub</a>
-<a href="www.linkedin.com/in/harry-quimbay-37b5351aa" aria-label="Visit my LinkedIn profile">LinkedIn</a>
-
-
-</div>
-
-<p>© <span id="year"></span> Harry Quimbay | Colombia</p>
-
-<p id="lastModified"></p>
-
+    <p>&copy; <span id="currentyear"></span> Harry Quimbay, Colombia</p>
+    <p id="lastModified"></p>
 </footer>
 
 </body>

@@ -1,9 +1,7 @@
-const menuButton = document.querySelector("#menu");
-const navMenu = document.querySelector("#nav-menu");
+const menuButton = document.getElementById("menuButton");
+const navMenu = document.getElementById("navMenu");
 
 menuButton.addEventListener("click", () => {
     navMenu.classList.toggle("open");
-
-    const isOpen = navMenu.classList.contains("open");
-    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.classList.toggle("open"); 
 });

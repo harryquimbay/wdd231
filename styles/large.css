@@ -1,0 +1,43 @@
+@media (min-width: 768px) {
+    #menuButton {
+        display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+header {
+    grid-template-columns: auto 1fr;
+}
+
+main {
+    grid-template-columns: 2fr 1fr;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+}
+
+main section:last-child {
+    grid-column: 1 / -1;
+}
+
+#courseContainer {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (min-width: 640px) {
+    .course-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (min-width: 960px) {
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}

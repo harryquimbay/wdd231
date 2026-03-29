@@ -5,9 +5,9 @@ const courses = [
         title: 'Introduction to Programming',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+        description: 'This course will introduce students to programming.',
         technology: ['Python'],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -15,9 +15,9 @@ const courses = [
         title: 'Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course introduces students to the World Wide Web and to careers in web site design and development.',
+        description: 'This course introduces students to web design and development.',
         technology: ['HTML', 'CSS'],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -25,7 +25,7 @@ const courses = [
         title: 'Programming with Functions',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers.',
+        description: 'Students learn to write and use functions.',
         technology: ['Python'],
         completed: false
     },
@@ -35,7 +35,7 @@ const courses = [
         title: 'Programming with Classes',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the notion of classes and objects.',
+        description: 'Introduction to object-oriented programming.',
         technology: ['C#'],
         completed: false
     },
@@ -45,9 +45,9 @@ const courses = [
         title: 'Dynamic Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming.',
+        description: 'Students learn to build dynamic websites using JavaScript.',
         technology: ['HTML', 'CSS', 'JavaScript'],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -55,14 +55,25 @@ const courses = [
         title: 'Frontend Web Development I',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming.',
+        description: 'Focus on UX, accessibility, and performance.',
         technology: ['HTML', 'CSS', 'JavaScript'],
         completed: false
     }
 ];
 
-const courseContainer = document.querySelector("#course-container");
-const totalCredits = document.querySelector("#total-credits");
+
+
+const courseContainer = document.getElementById("courseContainer");
+const totalCredits = document.getElementById("totalCredits");
+
+const allBtn = document.getElementById("allBtn");
+const wddBtn = document.getElementById("wddBtn");
+const cseBtn = document.getElementById("cseBtn");
+
+
+// ==============================
+//  COURSES FUNCTION DISPLAY
+// ==============================
 
 function displayCourses(courseList) {
     courseContainer.innerHTML = "";
@@ -71,6 +82,7 @@ function displayCourses(courseList) {
         const card = document.createElement("div");
         card.classList.add("course-card");
 
+        // If completed → orange style
         if (course.completed) {
             card.classList.add("completed");
         }
@@ -78,28 +90,43 @@ function displayCourses(courseList) {
         card.innerHTML = `
             <h3>${course.subject} ${course.number}</h3>
             <p>${course.title}</p>
-            <p>Credits: ${course.credits}</p>
+            <p>${course.credits} credits</p>
         `;
 
         courseContainer.appendChild(card);
     });
 
-    const credits = courseList.reduce((total, course) => total + course.credits, 0);
-    totalCredits.textContent = credits;
+    // Calculate total credits 
+    const total = courseList.reduce((sum, course) => sum + course.credits, 0);
+
+    totalCredits.textContent = `Total Credits: ${total}`;
 }
 
-document.querySelector("#all").addEventListener("click", () => {
+
+// ==============================
+// FILTER BUTTON EVENTS
+// ==============================
+
+// Show ALL courses
+allBtn.addEventListener("click", () => {
     displayCourses(courses);
 });
 
-document.querySelector("#wdd").addEventListener("click", () => {
+// Show only WDD courses
+wddBtn.addEventListener("click", () => {
     const wddCourses = courses.filter(course => course.subject === "WDD");
     displayCourses(wddCourses);
 });
 
-document.querySelector("#cse").addEventListener("click", () => {
+// Show only CSE courses
+cseBtn.addEventListener("click", () => {
     const cseCourses = courses.filter(course => course.subject === "CSE");
     displayCourses(cseCourses);
 });
+
+
+// ==============================
+// INITIAL LOAD
+// ==============================
 
 displayCourses(courses);
