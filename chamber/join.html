@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colombia Chamber | Join</title>
+    <meta name="description" content="Apply to join the Colombia Chamber of Commerce.">
+    <meta name="author" content="Harry Quimbay">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Slabo+27px&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+
+    <script src="scripts/chamber-navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="brand">
+        <img src="images/transformacion.webp" alt="Colombia Chamber logo" width="48" height="48">
+        <div class="brand-text">
+            <span class="brand-name">Colombia Chamber</span>
+            <span class="brand-subtitle">of Commerce</span>
+        </div>
+        </div>
+
+        <button id="menuButton" aria-label="Open menu"></button>
+
+        <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html" class="active">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join the Chamber</h1>
+
+        <section class="join-layout">
+        <section class="panel join-form-section">
+            <h2>Membership Application Form</h2>
+
+            <form method="get" action="thankyou.html" class="join-form">
+            <label>
+                Applicant First Name
+                <input
+                type="text"
+                name="firstName"
+                title="Enter your first name"
+                autocomplete="given-name"
+                required
+                >
+            </label>
+
+            <label>
+                Applicant Last Name
+                <input
+                type="text"
+                name="lastName"
+                title="Enter your last name"
+                autocomplete="family-name"
+                required
+                >
+            </label>
+
+            <label>
+                Organizational Title
+                <input
+                type="text"
+                name="orgTitle"
+                title="Enter your title using only letters, hyphens, and spaces, at least 7 characters long"
+                autocomplete="organization-title"
+                pattern="[A-Za-z\s\-]{7,}"
+                >
+            </label>
+
+            <label>
+                Email Address
+                <input
+                type="email"
+                name="email"
+                title="Enter a valid email address"
+                autocomplete="email"
+                placeholder="example@email.com"
+                required
+                >
+            </label>
+
+            <label>
+                Mobile Phone Number
+                <input
+                type="tel"
+                name="phone"
+                title="Enter your mobile phone number"
+                autocomplete="tel"
+                required
+                >
+            </label>
+
+            <label>
+                Business / Organization Name
+                <input
+                type="text"
+                name="organization"
+                title="Enter your business or organization name"
+                autocomplete="organization"
+                required
+                >
+            </label>
+
+            <label>
+                Membership Level
+                <select name="membership" title="Select a membership level">
+                <option value="np">NP Membership</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <label>
+                Business / Organization Description
+                <textarea
+                name="description"
+                title="Describe your business or organization"
+                rows="5"
+                ></textarea>
+            </label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <input type="submit" value="Submit Membership Application">
+            </form>
+        </section>
+
+        <aside class="panel membership-cards">
+            <h2>Membership Levels</h2>
+
+            <div class="membership-card card-animate">
+            <h3>NP Membership</h3>
+            <p>Designed for non-profit organizations with no membership fee.</p>
+            <button type="button" class="modal-link" data-modal="npModal">View Benefits</button>
+            </div>
+
+            <div class="membership-card card-animate">
+            <h3>Bronze Membership</h3>
+            <p>Entry-level support and directory visibility for growing organizations.</p>
+            <button type="button" class="modal-link" data-modal="bronzeModal">View Benefits</button>
+            </div>
+
+            <div class="membership-card card-animate">
+            <h3>Silver Membership</h3>
+            <p>Expanded benefits with added visibility, discounts, and training access.</p>
+            <button type="button" class="modal-link" data-modal="silverModal">View Benefits</button>
+            </div>
+
+            <div class="membership-card card-animate">
+            <h3>Gold Membership</h3>
+            <p>Premium chamber exposure, sponsorship opportunities, and top-level perks.</p>
+            <button type="button" class="modal-link" data-modal="goldModal">View Benefits</button>
+            </div>
+        </aside>
+        </section>
+
+        <dialog id="npModal">
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>No membership fee</li>
+                <li>Directory listing</li>
+                <li>Community networking opportunities</li>
+                <li>Access to basic chamber information</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="bronzeModal">
+        <h2>Bronze Membership Benefits</h2>
+        <ul>
+            <li>Directory listing</li>
+            <li>Member communication updates</li>
+            <li>Access to selected events</li>
+            <li>Basic promotional support</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="silverModal">
+        <h2>Silver Membership Benefits</h2>
+        <ul>
+            <li>All Bronze benefits</li>
+            <li>Training and workshop access</li>
+            <li>Event discounts</li>
+            <li>Improved promotional visibility</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="goldModal">
+        <h2>Gold Membership Benefits</h2>
+        <ul>
+            <li>All Silver benefits</li>
+            <li>Featured home page spotlight opportunities</li>
+            <li>Premium sponsorship options</li>
+            <li>Enhanced advertising support</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+        <div class="footer-left">
+            <p><strong>Colombia Chamber of Commerce</strong></p>
+            <p>Colombia</p>
+            <p>info@colombiachamber.org</p>
+            <p>+57 300 000 0000</p>
+        </div>
+
+        <div class="footer-center">
+        <a href="https://github.com/harryquimbay/wdd231/tree/main/chamber" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.linkedin.com/in/harry-quimbay-37b5351aa" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+        <div class="footer-right">
+            <p>WDD231 Class Project</p>
+            <p>Harry Quimbay</p>
+            <p>&copy; <span id="currentyear"></span></p>
+            <p id="lastModified"></p>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

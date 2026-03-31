@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colombia Chamber | Thank You</title>
+    <meta name="description" content="Thank you for applying to join the Colombia Chamber of Commerce.">
+    <meta name="author" content="Harry Quimbay">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Slabo+27px&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+
+    <script src="scripts/chamber-navigation.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="brand">
+        <img src="images/transformacion.webp" alt="Colombia Chamber logo" width="48" height="48">
+        <div class="brand-text">
+            <span class="brand-name">Colombia Chamber</span>
+            <span class="brand-subtitle">of Commerce</span>
+        </div>
+        </div>
+
+        <button id="menuButton" aria-label="Open menu"></button>
+
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+<main>
+    <section class="panel thankyou-panel">
+        <h1>Thank You</h1>
+        <p>Your application has been submitted successfully.</p>
+
+    <div class="submitted-info">
+        <p><strong>First Name:</strong> <span id="display-firstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="display-lastName"></span></p>
+        <p><strong>Email:</strong> <span id="display-email"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="display-phone"></span></p>
+        <p><strong>Business Name:</strong> <span id="display-organization"></span></p>
+        <p><strong>Submission Timestamp:</strong> <span id="display-timestamp"></span></p>
+    </div>
+
+        <a class="cta-button" href="index.html">Return Home</a>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p><strong>Colombia Chamber of Commerce</strong></p>
+            <p>Colombia</p>
+            <p>info@colombiachamber.org</p>
+            <p>+57 300 000 0000</p>
+        </div>
+
+        <div class="footer-center">
+            <a href="https://github.com/harryquimbay/wdd231/tree/main/chamber" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.linkedin.com/in/harry-quimbay-37b5351aa" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <div class="footer-right">
+            <p>WDD231 Class Project</p>
+            <p>Harry Quimbay</p>
+            <p>&copy; <span id="currentyear"></span></p>
+            <p id="lastModified"></p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("display-firstName").textContent = params.get("firstName") || "";
+        document.getElementById("display-lastName").textContent = params.get("lastName") || "";
+        document.getElementById("display-email").textContent = params.get("email") || "";
+        document.getElementById("display-phone").textContent = params.get("phone") || "";
+        document.getElementById("display-organization").textContent = params.get("organization") || "";
+        document.getElementById("display-timestamp").textContent = params.get("timestamp") || "";
+    </script>
+</body>
+</html>

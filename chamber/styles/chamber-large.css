@@ -47,3 +47,44 @@ nav a {
     margin: 0;
     }
 }
+
+
+
+
+@media (min-width: 800px) {
+    .home-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: start;
+}
+
+    .spotlights-grid,
+    .discover-grid,
+    .join-grid {
+        grid-template-columns: repeat(2, 1fr);
+}
+
+    .weather-current {
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1100px) {
+    .spotlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+.discover-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+@media (min-width: 900px) {
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
