@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Suien (水苑)</title>
+    <meta name="description" content="Browse the full Suien collection of swimwear and swimming accessories. Find one-pieces, bikinis, goggles, towels, bags, and more.">
+    <meta name="author" content="Harry Quimbay">
+
+    <meta property="og:title" content="Shop | Suien (水苑)">
+    <meta property="og:description" content="Browse the full Suien collection of swimwear and accessories.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/457B9D/F1FAEE?text=Suien+Shop">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/finalproject/shop.html">
+
+    <link rel="icon" href="images/logo_onda.png" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/large.css">
+    <script src="js/shop.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo_onda.png" alt="Suien logo" width="52" height="52">
+            <div class="logo-text">
+                <strong>Suien</strong>
+                <small>水苑</small>
+            </div>
+        </a>
+        <button id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+        <h1>Shop the Collection</h1>
+        <p>Explore swimwear and accessories for pool days, beach getaways, and training sessions.</p>
+        </section>
+
+        <section class="filters">
+        <label for="categoryFilter">Filter by category:</label>
+        <select id="categoryFilter">
+            <option value="all">All Products</option>
+            <option value="Women">Women</option>
+            <option value="Men">Men</option>
+            <option value="Kids">Kids</option>
+            <option value="Accessories">Accessories</option>
+        </select>
+        </section>
+
+        <section>
+        <div id="allProducts" class="product-grid"></div>
+        </section>
+
+        <dialog id="productModal">
+        <button id="closeModal" aria-label="Close product details">&times;</button>
+        <div id="modalContent"></div>
+        </dialog>
+    </main>
+
+<footer>
+    <p>&copy; 2026 Suien (水苑) | Harry Quimbay | WDD231 Final Project</p>
+    <p>
+        <a href="attributions.html">Attributions</a> |
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Video</a>
+    </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suien (水苑) | Swimwear & Accessories</title>
+    <meta name="description" content="Suien is an elegant ecommerce store for swimwear and swimming accessories. Explore featured collections, best sellers, and essentials for every swim day.">
+    <meta name="author" content="Harry Quimbay">
+
+    <meta property="og:title" content="Suien (水苑) | Swimwear & Accessories">
+    <meta property="og:description" content="Shop elegant swimwear and accessories at Suien.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/1D3557/F1FAEE?text=Suien">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/finalproject/index.html">
+
+    <link rel="icon" href="images/logo_onda.png" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/large.css">
+    <script src="js/main.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo_onda.png" alt="Suien logo" width="52" height="52">
+            <div class="logo-text">
+                <strong>Suien</strong>
+                <small>水苑</small>
+            </div>
+        </a>
+        <button id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+        <nav id="mainNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        </div>
+    </header>
+
+<main>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="tagline">Elegant movement. Coastal confidence.</p>
+            <h1>Swimwear and accessories designed to flow with you.</h1>
+            <p>
+            Discover polished swim styles, modern silhouettes, and essential accessories
+            for beach days, pool sessions, and every sunny escape.
+            </p>
+            <div class="hero-buttons">
+            <a class="btn primary" href="shop.html">Shop Collection</a>
+            <a class="btn secondary" href="#featured">View Featured</a>
+            </div>
+        </div>
+        <div class="hero-card">
+            <h2>New Season Drop</h2>
+            <p>Fresh arrivals in statement reds, ocean blues, and timeless silhouettes.</p>
+        </div>
+        </section>
+
+        <section class="info-grid">
+        <article class="info-card">
+            <h2>Curated Swimwear</h2>
+            <p>Minimal, flattering, and versatile styles for every swim mood.</p>
+        </article>
+        <article class="info-card">
+            <h2>Accessories That Travel Well</h2>
+            <p>Caps, bags, sandals, towels, and goggles selected for comfort and style.</p>
+        </article>
+        <article class="info-card">
+            <h2>Comfort + Confidence</h2>
+            <p>Pieces made to support movement, confidence, and effortless summer styling.</p>
+        </article>
+        </section>
+
+        <section id="featured" class="featured-section">
+        <div class="section-heading">
+            <h2>Featured Products</h2>
+            <p>Some of our current favorites from the Suien collection.</p>
+        </div>
+        <div id="featuredProducts" class="product-grid"></div>
+        </section>
+
+        <section class="preference-panel">
+        <div>
+            <h2>Choose your view</h2>
+            <p>Your layout preference is saved using local storage.</p>
+        </div>
+        <div class="view-buttons">
+            <button id="gridView" class="btn secondary">Grid View</button>
+            <button id="listView" class="btn secondary">List View</button>
+        </div>
+        </section>
+
+        <dialog id="productModal">
+        <button id="closeModal" aria-label="Close product details">&times;</button>
+        <div id="modalContent"></div>
+        </dialog>
+</main>
+
+<footer>
+    <p>&copy; 2026 Suien (水苑) | Harry Quimbay | WDD231 Final Project</p>
+    <p>
+        <a href="attributions.html">Attributions</a> |
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Video</a>
+    </p>
+</footer>
+</body>
+</html>

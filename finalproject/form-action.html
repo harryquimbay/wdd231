@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission | Suien (水苑)</title>
+    <meta name="description" content="Review submitted contact form details for Suien.">
+    <meta name="author" content="Harry Quimbay">
+
+    <link rel="icon" href="images/logo_onda.png" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo_onda.png" alt="Suien logo" width="52" height="52">
+            <div class="logo-text">
+                <strong>Suien</strong>
+                <small>水苑</small>
+            </div>
+        </a>
+        <nav id="mainNav" class="always-open">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+        <h1>Thank You</h1>
+        <p>Your message has been received.</p>
+        </section>
+
+        <section class="submitted-data">
+        <h2>Submitted Information</h2>
+        <p><strong>Name:</strong> <span id="fullname"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Phone:</strong> <span id="phone"></span></p>
+        <p><strong>Inquiry:</strong> <span id="inquiry"></span></p>
+        <p><strong>Message:</strong> <span id="message"></span></p>
+        <p><strong>Submitted:</strong> <span id="timestamp"></span></p>
+        </section>
+    </main>
+
+<footer>
+    <p>&copy; 2026 Suien (水苑) | Harry Quimbay | WDD231 Final Project</p>
+    <p>
+        <a href="attributions.html">Attributions</a> |
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Video</a>
+    </p>
+</footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('fullname').textContent = params.get('fullname') || '';
+        document.getElementById('email').textContent = params.get('email') || '';
+        document.getElementById('phone').textContent = params.get('phone') || '';
+        document.getElementById('inquiry').textContent = params.get('inquiry') || '';
+        document.getElementById('message').textContent = params.get('message') || '';
+        document.getElementById('timestamp').textContent = params.get('timestamp') || '';
+    </script>
+</body>
+</html>

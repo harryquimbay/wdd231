@@ -1,0 +1,362 @@
+:root {
+    --punch-red: #E63946;
+    --honeydew: #F1FAEE;
+    --frosted-blue: #A8DADC;
+    --cerulean: #457B9D;
+    --oxford-navy: #1D3557;
+    --white: #ffffff;
+    --shadow: 0 4px 14px rgba(29, 53, 87, 0.15);
+    --radius: 14px;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background-color: var(--honeydew);
+    color: var(--oxford-navy);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+header {
+    background-color: var(--oxford-navy);
+    color: var(--white);
+}
+
+.topbar {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+#menuBtn {
+    justify-self: end;
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 0.4rem 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#mainNav {
+    grid-column: 1 / -1;
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#mainNav.open,
+.always-open {
+    display: flex;
+}
+
+#mainNav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-weight: 700;
+}
+
+#mainNav a.active {
+    color: var(--frosted-blue);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--punch-red);
+    font-weight: 700;
+}
+
+.hero-card,
+.info-card,
+.product-card,
+.contact-form,
+.contact-info,
+.submitted-data,
+.filters,
+.preference-panel {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.hero-card {
+    background: linear-gradient(135deg, var(--cerulean), var(--frosted-blue));
+    color: var(--white);
+}
+
+.hero-buttons,
+.view-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn.primary {
+    background-color: var(--punch-red);
+    color: var(--white);
+}
+
+.btn.secondary {
+    background-color: var(--cerulean);
+    color: var(--white);
+}
+
+.page-banner {
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.page-banner h1,
+.section-heading h2 {
+    margin-bottom: 0.5rem;
+}
+
+.info-grid,
+.product-grid,
+.contact-wrapper {
+    display: grid;
+    gap: 1rem;
+}
+
+.featured-section {
+    margin-top: 2rem;
+}
+
+.product-grid {
+    grid-template-columns: 1fr;
+}
+
+.product-card {
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* or 300px depending on your design */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+.product-card h3 {
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    margin: 0.3rem 0;
+}
+
+.price {
+    color: var(--punch-red);
+    font-weight: 900;
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--frosted-blue);
+    color: var(--oxford-navy);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.filters {
+    margin-bottom: 1.5rem;
+}
+
+.filters select,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--cerulean);
+    border-radius: 8px;
+    font: inherit;
+    margin-top: 0.35rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+dialog {
+    border: none;
+    border-radius: var(--radius);
+    width: min(90%, 650px);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+dialog::backdrop {
+    background: rgba(29, 53, 87, 0.65);
+}
+
+#closeModal {
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--punch-red);
+    float: right;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 280px;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+.preference-panel {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.list-view {
+    grid-template-columns: 1fr;
+}
+
+.list-view .product-card {
+    display: grid;
+    gap: 1rem;
+}
+
+footer {
+    background-color: var(--oxford-navy);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--frosted-blue);
+    text-decoration: none;
+}
+
+.attributions-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+a:hover,
+button:hover {
+    opacity: 0.9;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus {
+    outline: 3px solid var(--punch-red);
+    outline-offset: 2px;
+}
+
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text strong {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+}
+
+.logo-text small {
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+}

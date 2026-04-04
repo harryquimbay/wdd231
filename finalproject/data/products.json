@@ -1,0 +1,136 @@
+[
+    {
+        "id": 1,
+        "name": "Red One-Piece",
+        "category": "Women",
+        "price": 58.99,
+        "color": "Punch Red",
+        "size": "XS-XL",
+        "material": "Nylon / Spandex",
+        "featured": true,
+        "description": "A sleek one-piece designed for confidence, comfort, and elegant movement.",
+        "image": "images/suite_woman5.webp"
+    },
+    {
+        "id": 2,
+        "name": "Ocean Line Bikini Set",
+        "category": "Women",
+        "price": 49.99,
+        "color": "blue",
+        "size": "XS-L",
+        "material": "Polyester / Spandex",
+        "featured": true,
+        "description": "A modern bikini set with a clean silhouette and supportive fit.",
+        "image": "images/suite_woman6.webp"
+    },
+    {
+        "id": 3,
+        "name": "Sky Blue Suite",
+        "category": "Women",
+        "price": 39.99,
+        "color": "Honeydew",
+        "size": "S-XL",
+        "material": "Lightweight Cotton Blend",
+        "featured": false,
+        "description": "An airy cover-up perfect for layering from beach chair to boardwalk.",
+        "image": "images/suite_woman3.webp"
+    },
+    {
+        "id": 4,
+        "name": "Frost Black Suite",
+        "category": "Women",
+        "price": 44.99,
+        "color": "Frosted Black",
+        "size": "S-XL",
+        "material": "UV Protective Stretch Fabric",
+        "featured": true,
+        "description": "A smooth and protective rash guard made for swim training and sunny beach days.",
+        "image": "images/suite_woman.webp"
+    },
+    {
+        "id": 5,
+        "name": "Oxford Navy Swim ",
+        "category": "Women",
+        "price": 36.99,
+        "color": "Oxford Navy",
+        "size": "S-XXL",
+        "material": "Quick-Dry Polyester",
+        "featured": false,
+        "description": "Classic swim shorts with a tailored fit and quick-dry comfort.",
+        "image": "images/suite_woman4.webp"
+    },
+    {
+        "id": 6,
+        "name": "Tunder Green Fins",
+        "category": "Accessories",
+        "price": 19.99,
+        "color": "Cerulean",
+        "size": "One Size",
+        "material": "Silicone / Polycarbonate",
+        "featured": true,
+        "description": "Streamlined goggles with anti-fog lenses and adjustable comfort.",
+        "image": "images/fins.webp"
+    },
+    {
+        "id": 11,
+        "name": "Sunline Bikini Bottom",
+        "category": "Men",
+        "price": 22.99,
+        "color": "Punch Red",
+        "size": "XS-L",
+        "material": "Nylon / Spandex",
+        "featured": false,
+        "description": "A flattering bikini bottom designed to pair easily with your favorite tops.",
+        "image": "images/short_3.webp"
+    },
+    {
+        "id": 12,
+        "name": "Darth Black Shirt",
+        "category": "Men",
+        "price": 24.99,
+        "color": "Black",
+        "size": "XS-L",
+        "material": "Nylon / Spandex",
+        "featured": false,
+        "description": "A supportive bikini top with clean straps and a minimal silhouette.",
+        "image": "images/short.webp"
+    },
+    {
+        "id": 14,
+        "name": "Rainbow Kids Swim Set",
+        "category": "Kids",
+        "price": 34.99,
+        "color": "Cerulean",
+        "size": "Kids S-L",
+        "material": "Polyester / Spandex",
+        "featured": false,
+        "description": "A playful and comfortable swim set for kids with easy movement in mind.",
+        "image": "images/Kid_suite2.webp"
+    },
+
+    {
+        "id": 15,
+        "name": "Coastline",
+        "category": "Kids",
+        "price": 18.99,
+        "color": "lemon",
+        "size": "12-16",
+        "material": "Polyester / Spandex",
+        "featured": false,
+        "description": "A stylish short.",
+        "image": "images/Kid_suite.webp"
+    },
+
+    {
+        "id": 16,
+        "name": "King Blue",
+        "category": "Kids",
+        "price": 18.99,
+        "color": "blue",
+        "size": "Polyester / Spandex",
+        "material": "Canvas",
+        "featured": false,
+        "description": "A stylish visor for sun coverage and polished coastal looks.",
+        "image": "images/Short_kid.webp"
+    }
+]

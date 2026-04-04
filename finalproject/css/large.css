@@ -1,0 +1,50 @@
+@media only screen and (min-width: 700px) {
+    .topbar {
+        grid-template-columns: auto 1fr;
+    }
+
+#menuBtn {
+    display: none;
+}
+
+#mainNav {
+    display: flex;
+    grid-column: auto;
+    flex-direction: row;
+    justify-content: end;
+    gap: 1.5rem;
+}
+
+.hero {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.info-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.product-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-wrapper {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+}
+
+.list-view .product-card {
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+.product-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    }
+}

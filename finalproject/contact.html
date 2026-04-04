@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Suien (水苑)</title>
+    <meta name="description" content="Contact Suien for product questions, order inquiries, and style guidance.">
+    <meta name="author" content="Harry Quimbay">
+
+    <meta property="og:title" content="Contact | Suien (水苑)">
+    <meta property="og:description" content="Contact Suien for questions about products and orders.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/A8DADC/1D3557?text=Contact+Suien">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/finalproject/contact.html">
+
+    <link rel="icon" href="images/logo_onda.png" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/large.css">
+    <script src="js/contact.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo_onda.png" alt="Suien logo" width="52" height="52">
+            <div class="logo-text">
+                <strong>Suien</strong>
+                <small>水苑</small>
+            </div>
+        </a>
+        <button id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+        <h1>Contact Suien</h1>
+        <p>Have a question about a product, order, or style recommendation? Send us a message.</p>
+        </section>
+
+        <section class="contact-wrapper">
+        <form method="get" action="form-action.html" class="contact-form">
+            <label>
+            Full Name
+            <input type="text" name="fullname" title="Enter your full name" required autocomplete="name">
+            </label>
+
+            <label>
+            Email
+            <input type="email" name="email" title="Enter your email address" required autocomplete="email">
+            </label>
+
+            <label>
+            Phone
+            <input type="tel" name="phone" title="Enter your phone number" required autocomplete="tel">
+            </label>
+
+            <label>
+            Inquiry Type
+            <select name="inquiry" required>
+                <option value="">Select one</option>
+                <option value="Order Question">Order Question</option>
+                <option value="Product Help">Product Help</option>
+                <option value="Returns">Returns</option>
+                <option value="General Inquiry">General Inquiry</option>
+            </select>
+            </label>
+
+            <label>
+            Message
+            <textarea name="message" rows="6" required title="Enter your message"></textarea>
+            </label>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+
+            <button type="submit" class="btn primary">Send Message</button>
+        </form>
+
+        <aside class="contact-info">
+            <h2>Customer Care</h2>
+            <p>Email: hello@suienstore.com</p>
+            <p>Phone: +1 (800) 555-2048</p>
+            <p>Hours: Monday to Friday, 9:00 AM – 5:00 PM</p>
+        </aside>
+        </section>
+    </main>
+
+<footer>
+    <p>&copy; 2026 Suien (水苑) | Harry Quimbay | WDD231 Final Project</p>
+    <p>
+        <a href="attributions.html">Attributions</a> |
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">Project Video</a>
+    </p>
+</footer>
+</body>
+</html>
