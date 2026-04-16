@@ -12,5 +12,8 @@ if (menuBtn && mainNav) {
 
 if (timestampField) {
     const now = new Date();
-    timestampField.value = now.toLocaleString();
+    timestampField.value = now.toLocaleString("en-US", {
+        dateStyle: "medium",
+        timeStyle: "short"
+    });
 }

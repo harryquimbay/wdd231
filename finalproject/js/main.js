@@ -20,13 +20,14 @@ async function getProducts() {
     try {
         const response = await fetch("data/products.json");
         if (!response.ok) {
-        throw new Error("Unable to load products data.");
+            throw new Error("Unable to load products data.");
         }
+
         const products = await response.json();
         return products;
     } catch (error) {
         if (featuredContainer) {
-        featuredContainer.innerHTML = `<p>There was a problem loading products. ${error.message}</p>`;
+            featuredContainer.innerHTML = `<p>There was a problem loading products. ${error.message}</p>`;
         }
         return [];
     }
@@ -39,20 +40,23 @@ function renderFeatured(products) {
 
     featuredContainer.innerHTML = featured.map((product) => `
         <article class="product-card">
-        <img src="${product.image}" alt="${product.name}" loading="lazy" width="400" height="500">
-        <span class="badge">${product.category}</span>
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-        <p class="price">$${product.price.toFixed(2)}</p>
-        <button class="btn primary details-btn" data-id="${product.id}">View Details</button>
+            <img src="${product.image}" alt="${product.name}" loading="lazy" width="400" height="500">
+            <span class="badge">${product.category}</span>
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <p class="price">$${product.price.toFixed(2)}</p>
+            <button class="btn primary details-btn" type="button" data-id="${product.id}" aria-label="View details for ${product.name}">
+                View Details
+            </button>
         </article>
     `).join("");
 
-    const detailButtons = document.querySelectorAll(".details-btn");
+    const detailButtons = featuredContainer.querySelectorAll(".details-btn");
+
     detailButtons.forEach((button) => {
         button.addEventListener("click", () => {
-        const selected = products.find((item) => item.id === Number(button.dataset.id));
-        openModal(selected);
+            const selected = products.find((item) => item.id === Number(button.dataset.id));
+            openModal(selected);
         });
     });
 }
@@ -61,7 +65,7 @@ function openModal(product) {
     if (!modal || !modalContent || !product) return;
 
     modalContent.innerHTML = `
-        <h2>${product.name}</h2>
+        <h2 id="modalTitle">${product.name}</h2>
         <img class="modal-image" src="${product.image}" alt="${product.name}" loading="lazy" width="400" height="500">
         <p><strong>Category:</strong> ${product.category}</p>
         <p><strong>Color:</strong> ${product.color}</p>
@@ -74,7 +78,24 @@ function openModal(product) {
 }
 
 if (closeModal && modal) {
-    closeModal.addEventListener("click", () => modal.close());
+    closeModal.addEventListener("click", () => {
+        modal.close();
+    });
+}
+
+if (modal) {
+    modal.addEventListener("click", (event) => {
+        const dialogDimensions = modal.getBoundingClientRect();
+        const clickedOutside =
+            event.clientX < dialogDimensions.left ||
+            event.clientX > dialogDimensions.right ||
+            event.clientY < dialogDimensions.top ||
+            event.clientY > dialogDimensions.bottom;
+
+        if (clickedOutside) {
+            modal.close();
+        }
+    });
 }
 
 function saveViewPreference(view) {
@@ -83,7 +104,9 @@ function saveViewPreference(view) {
 
 function applyViewPreference() {
     if (!featuredContainer) return;
+
     const storedView = localStorage.getItem("suienView");
+
     if (storedView === "list") {
         featuredContainer.classList.add("list-view");
     } else {
@@ -91,21 +114,27 @@ function applyViewPreference() {
     }
 }
 
-if (gridBtn) {
+if (gridBtn && featuredContainer) {
     gridBtn.addEventListener("click", () => {
         featuredContainer.classList.remove("list-view");
         saveViewPreference("grid");
     });
 }
 
-if (listBtn) {
+if (listBtn && featuredContainer) {
     listBtn.addEventListener("click", () => {
         featuredContainer.classList.add("list-view");
         saveViewPreference("list");
     });
 }
 
-applyViewPreference();
+async function initHomePage() {
+    applyViewPreference();
 
-const products = await getProducts();
-renderFeatured(products);
+    if (featuredContainer) {
+        const products = await getProducts();
+        renderFeatured(products);
+    }
+}
+
+initHomePage();
