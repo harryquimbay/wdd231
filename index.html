@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+    name="description"
+    content="Harry Quimbay's WDD231 Web Frontend Development course homepage. Explore coursework, programming certificates, and web development projects."
+>
+    <meta name="author" content="Harry Quimbay">
+
+    <title>WDD231 Course Home | Harry Quimbay</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="images/logo.svg"
+        type="image/svg+xml"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link  
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;500;600;700&display=swap" rel="stylesheet"
+    >
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+    </head>
+
+    <body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="branding">
+
+        <img
+            src="images/logo.svg"
+            alt="Harry Quimbay personal website logo"
+            width="48"
+            height="48"
+        >
+
+        <span>Harry Quimbay</span>
+
+        <!-- Mobile Navigation Button -->
+        <button
+            id="menu"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation"
+        >
+            ☰
+        </button>
+
+        </div>
+
+        <!-- MAIN NAVIGATION -->
+        <nav id="navigation" aria-label="Main navigation">
+
+        <a
+            href="index.html"
+            class="active"
+            aria-current="page"
+        >
+            Home
+        </a>
+
+        <a href="chamber/index.html">
+            Chamber
+        </a>
+
+        <a href="final/index.html">
+            Final
+        </a>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <h1>Home</h1>
+
+
+        <div class="top-sections">
+
+
+        <section class="course-work">
+
+            <h2>Course Work</h2>
+
+            <ul>
+            <li>HTML and CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Design</li>
+            </ul>
+
+        </section>
+
+        <section class="location">
+
+            <h2>Bogotá, Colombia</h2>
+
+            <figure>
+
+            <img
+                src="images/bogota.webp"
+                alt="Panoramic view of Bogotá, Colombia"
+                width="600"
+                height="400"
+            >
+
+            <figcaption>
+                Bogotá, Colombia
+            </figcaption>
+
+            </figure>
+
+        </section>
+
+        </div>
+
+
+        <section class="certificate">
+
+        <h2>
+            Web and Computer Programming Certificate
+        </h2>
+
+        <div
+            class="filters"
+            role="group"
+            aria-label="Filter certificate courses"
+        >
+
+            <button
+            id="all"
+            type="button"
+            >
+            All Courses
+            </button>
+
+            <button
+            id="wdd"
+            type="button"
+            >
+            WDD Courses
+            </button>
+
+            <button
+            id="cse"
+            type="button"
+            >
+            CSE Courses
+            </button>
+
+        </div>
+
+        <!-- DYNAMIC COURSE CARDS -->
+        <div
+            id="course-cards"
+            aria-live="polite"
+        ></div>
+
+        <!-- DYNAMIC CREDIT TOTAL -->
+        <p
+            id="total-credits"
+            aria-live="polite"
+        ></p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <!-- SOCIAL MEDIA LINKS -->
+        <div class="social-links">
+
+        <a
+            href="https://github.com/harryquimbay/wdd231"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Harry Quimbay GitHub repository"
+        >
+            GitHub
+        </a>
+
+        <a
+            href="https://www.linkedin.com/in/harry-quimbay-37b5351aa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+        >
+            LinkedIn
+        </a>
+
+        </div>
+
+        <!-- DYNAMIC COPYRIGHT -->
+        <p>
+        &copy;
+        <span id="currentyear"></span>
+        | Harry Quimbay | Colombia
+        </p>
+
+        <!-- DYNAMIC LAST MODIFICATION DATE -->
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>
+

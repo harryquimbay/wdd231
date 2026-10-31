@@ -1,0 +1,306 @@
+
+:root {
+    --primary: #193d59;
+    --secondary: #087e9b;
+    --background: #f5f7fa;
+    --text: #102b40;
+    --white: #ffffff;
+    --light-blue: #e4edf3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Encode Sans Expanded", Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*HEADER */
+
+header {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px 20px;
+}
+
+
+.branding span {
+    min-width: 0;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-weight: 700;
+}
+
+.branding img {
+    width: 48px;
+    height: 48px;
+}
+
+.branding span {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+
+
+
+/* MOBILE HAMBURGER MENU */
+
+#menu {
+    display: block;
+    margin-left: auto;
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+#menu:hover,
+#menu:focus-visible {
+    background-color: var(--secondary);
+}
+
+/* NAVIGATION */
+
+#navigation {
+    display: none;
+    flex-direction: column;
+    background-color: #102b40;
+}
+
+#navigation.open {
+    display: flex;
+}
+
+#navigation a {
+    display: block;
+    padding: 14px 18px;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+#navigation a:hover,
+#navigation a:focus-visible,
+#navigation a.active {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+/* MAIN CONTENT*/
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    margin: 8px 0 20px;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+.top-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* CONTENT SECTIONS*/
+
+section {
+    background-color: var(--white);
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin: 0;
+    padding: 12px 16px;
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* COURSE WORK SECTION*/
+
+.course-work ul {
+    margin: 0;
+    padding: 24px 24px 24px 36px;
+}
+
+.course-work li {
+    margin-bottom: 10px;
+}
+
+/* LOCATION SECTION*/
+
+.location figure {
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+}
+
+.location img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.location figcaption {
+    padding-top: 8px;
+    font-size: 0.9rem;
+}
+
+/* CERTIFICATE SECTION*/
+
+.certificate {
+    margin-top: 20px;
+    padding-bottom: 24px;
+}
+
+/* Filter Buttons */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 12px;
+}
+
+.filters button {
+    padding: 10px 18px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.filters button:hover,
+.filters button:focus-visible {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* DYNAMIC COURSE CARDS */
+
+#course-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 20px;
+    margin: 8px 0 20px;
+}
+
+.course-card {
+    display: block;
+    padding: 16px;
+    background-color: var(--light-blue);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/*Courses */
+
+.course-card.completed {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--secondary);
+}
+
+.course-card.completed::before {
+    content: "✓ ";
+}
+
+/* Total Credits */
+
+#total-credits {
+    margin: 12px 0 0;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/*FOOTER */
+
+footer {
+    margin-top: 24px;
+    padding: 24px 16px;
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 12px;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    color: #b8eaff;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    color: #e2f2fc;
+}
+
+/* ACCESSIBILITY*/
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #ffcf56;
+    outline-offset: 3px;
+}
