@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Directory | Bogotá Chamber of Commerce</title>
+
+    <meta name="description"
+            content="Explore the Bogotá Chamber of Commerce student project directory featuring businesses and services in Bogotá, Colombia.">
+
+    <meta name="author" content="Harry Quimbay">
+
+    <meta property="og:title"
+            content="Business Directory | Bogotá Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+            content="Discover businesses and services in Bogotá, Colombia through this WDD231 student project.">
+    <meta property="og:image"
+            content="https://harryquimbay.github.io/wdd231/chamber/images/bogota-og.jpg">
+    <meta property="og:url"
+            content="https://harryquimbay.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon"
+            href="images/bgt_logo.svg"
+            type="image/svg+xml">
+
+    <link rel="preconnect"
+            href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="branding"
+                href="directory.html"
+                aria-label="Bogotá Chamber of Commerce directory">
+
+                <img src="images/bgt_logo.svg"
+                        alt="Bogotá Chamber of Commerce logo"
+                        width="60"
+                        height="60">
+
+                <span class="brand-text">
+                    <strong>Bogotá</strong>
+                    <span>Chamber of Commerce</span>
+                </span>
+            </a>
+
+            <button id="menu"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navigation">
+                ☰
+            </button>
+        </div>
+
+        <nav id="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html"
+                class="active"
+                aria-current="page">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="directory-intro">
+            <h1>Business Directory</h1>
+            <p>
+                Discover businesses and organizations contributing
+                to Bogotá's growing economy. Explore our chamber
+                directory and connect with local services.
+            </p>
+        </section>
+
+        <section class="directory-section"
+                    aria-labelledby="members-heading">
+
+            <div class="directory-toolbar">
+                <h2 id="members-heading">Our Members</h2>
+
+                <div class="view-controls"
+                        role="group"
+                        aria-label="Choose directory display">
+
+                    <button id="grid-view"
+                            type="button"
+                            aria-pressed="true">
+                        Grid View
+                    </button>
+
+                    <button id="list-view"
+                            type="button"
+                            aria-pressed="false">
+                        List View
+                    </button>
+                </div>
+            </div>
+
+            <div id="members"
+                    class="members-grid"
+                    aria-live="polite">
+                <p>Loading chamber members...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <div class="footer-contact">
+                <h2>Bogotá Chamber of Commerce</h2>
+                <p>Bogotá, Colombia</p>
+                <p>Academic website project for WDD 231.</p>
+                <p>
+                    Not affiliated with the official
+                    Chamber of Commerce.
+                </p>
+            </div>
+
+            <div class="footer-social">
+                <h2>Project Information</h2>
+
+                <a href="https://github.com/harryquimbay/wdd231"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View Project on GitHub
+                </a>
+            </div>
+
+            <div class="footer-development">
+                <p>WDD 231 – Frontend Web Development I</p>
+                <p>Harry Quimbay</p>
+
+                <p>
+                    &copy; <span id="currentyear"></span>
+                    Bogotá Chamber of Commerce
+                </p>
+
+                <p id="lastModified"></p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,75 @@
+
+[
+    {
+        "name": "Unilago",
+        "address": "Ak 15 #78-33, Chapinero, Bogotá, Cundinamarca",
+        "phone": "+57 601 555 0101",
+        "website": "https://unilago.com/?srsltid=AYCX9vKLh42uswo9LI3PqlREomf2q2stXZ2_HYpE_BH_FVdfYfEi3XYV",
+        "image": "Unilago.svg",
+        "membership": 3,
+        "category": "Technology",
+        "description": "Software development, cybersecurity, and digital transformation services."
+    },
+    {
+        "name": "Café Quindio",
+        "address": "Carrera 7 #72-41, Bogotá, Colombia",
+        "phone": "+57 601 555 0102",
+        "website": "https://www.cafequindio.com.co/collections/cafe-colombiano-premium?utm_source=sem&utm_medium=cpc&utm_campaign=marca&gad_source=1&gad_campaignid=23837234070&gbraid=0AAAAA-X2GP6YReW_Ji-vgeLfg6jRL7V1s&gclid=CjwKCAiAtbvXBhB_EiwAjwv9JqbYyM12dHLDa3UapOF6sXi_whDlM7Dx5uhysOJvdr5FMD5x0daJZRoC0AsQAvD_BwE",
+        "image": "cafe_quindio.svg",
+        "membership": 2,
+        "category": "Food and Beverage",
+        "description": "Specialty Colombian coffee, local pastries, and café experiences."
+    },
+    {
+        "name": "Envia",
+        "address": "Avenida El Dorado #68D-35, Bogotá, Colombia",
+        "phone": "+57 601 555 0103",
+        "website": "https://envia.co/",
+        "image": "envia.svg",
+        "membership": 3,
+        "category": "Logistics",
+        "description": "Transportation, distribution, and supply chain management services."
+    },
+    
+    {
+        "name": "Arturo Calle",
+        "address": "Bogotá, Colombia",
+        "phone": "",
+        "website": "https://www.arturocalle.com/",
+        "image": "arturo_calle.svg",
+        "membership": 1,
+        "category": "Fashion and Retail",
+        "description": "Colombian fashion brand offering men's clothing, footwear, accessories, and contemporary apparel."
+    },
+    {
+        "name": "Grupo Éxito",
+        "address": "Bogotá, Colombia",
+        "phone": "",
+        "website": "https://www.exito.com/",
+        "image": "exito.svg",
+        "membership": 2,
+        "category": "Retail and Supermarkets",
+        "description": "Colombian retail group operating supermarkets and other retail businesses, offering groceries, household products, and consumer goods."
+    },
+    {
+        "name": "Banco Davivienda",
+        "address": "Bogotá, Colombia",
+        "phone": "",
+        "website": "https://www.davivienda.com/",
+        "image": "davivienda.svg",
+        "membership": 3,
+        "category": "Banking and Financial Services",
+        "description": "Colombian financial institution providing personal and business banking, savings accounts, loans, credit cards, and digital banking services."
+    },
+    {
+        "name": "Entrelazos",
+        "address": "Bogotá, Colombia",
+        "phone": "",
+        "website": "https://entrelazos.co/",
+        "image": "entrelazos.svg",
+        "membership": 2,
+        "category": "To Be Confirmed",
+        "description": "Business information pending confirmation."
+    }
+
+]

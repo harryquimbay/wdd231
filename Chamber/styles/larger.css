@@ -1,0 +1,276 @@
+
+@media screen and (min-width: 768px) {
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+    }
+
+    .branding img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .brand-text strong {
+        font-size: 1.5rem;
+    }
+
+    .brand-text span {
+        font-size: 0.9rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: var(--primary);
+    }
+
+    #navigation a {
+        display: block;
+        flex: 1;
+        max-width: 250px;
+        padding: 1rem 1.5rem;
+        color: var(--surface);
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+    }
+
+    #navigation a:hover,
+    #navigation a:focus-visible,
+    #navigation a.active {
+        background-color: var(--secondary);
+        color: var(--surface);
+    }
+
+    main {
+        max-width: 1200px;
+        padding: 2rem 1.5rem;
+    }
+
+    .directory-intro {
+        padding: 2rem;
+    }
+
+    .directory-intro h1 {
+        font-size: 2.2rem;
+    }
+
+    .directory-intro p {
+        max-width: 75ch;
+    }
+
+    .directory-section {
+        margin-top: 2rem;
+    }
+
+    .directory-toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .directory-toolbar h2 {
+        font-size: 1.7rem;
+    }
+
+    .view-controls {
+        justify-content: flex-end;
+    }
+
+    .view-controls button {
+        min-width: 120px;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .member-card img {
+        height: 200px;
+    }
+
+    .member-info {
+        padding: 1.5rem;
+    }
+
+    .member-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .members-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .members-list .member-card {
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    .members-list .member-card img {
+        display: none;
+    }
+
+    .members-list .member-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .members-list .member-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .site-footer {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1.4fr 1fr 1.4fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .footer-development {
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-content {
+        padding: 1rem 2rem;
+    }
+
+    .branding img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .brand-text strong {
+        font-size: 1.6rem;
+    }
+
+    .brand-text span {
+        font-size: 0.95rem;
+    }
+
+    #navigation a {
+        padding: 1.1rem 1.75rem;
+    }
+
+    main {
+        padding: 2.5rem 2rem;
+    }
+
+    .directory-intro {
+        padding: 2.5rem;
+    }
+
+    .directory-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .directory-toolbar h2 {
+        font-size: 1.8rem;
+    }
+
+    .members-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .member-card img {
+        height: 220px;
+    }
+
+    .member-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .members-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .members-list .member-card {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .members-list .member-info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem 2rem;
+        align-items: start;
+    }
+
+    .members-list .member-info h3 {
+        grid-column: 1 / -1;
+    }
+
+    .members-list .member-info a {
+        justify-self: start;
+    }
+
+    .footer-content {
+        gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+
+    .directory-intro {
+        padding: 3rem;
+    }
+
+    .members-grid {
+        gap: 1.75rem;
+    }
+
+    .member-card img {
+        height: 230px;
+    }
+
+    .member-info {
+        padding: 1.75rem;
+    }
+
+    .members-list .member-info {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .members-list .member-info h3 {
+        grid-column: 1 / -1;
+    }
+
+    .site-footer {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #navigation a {
+        transition: none;
+    }
+}
+

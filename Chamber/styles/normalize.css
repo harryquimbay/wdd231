@@ -1,0 +1,92 @@
+/* Consistent box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margins */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+    margin: 0;
+}
+
+/* Base document settings */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Improve media behavior */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit typography for form controls */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Accessible buttons */
+button {
+    cursor: pointer;
+}
+
+/* Consistent link behavior */
+a {
+    text-decoration-skip-ink: auto;
+}
+
+/* Prevent long text from overflowing */
+p,
+h1,
+h2,
+h3,
+h4 {
+    overflow-wrap: break-word;
+}
+
+/* Improve heading readability */
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+/* Accessible keyboard focus */
+:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
