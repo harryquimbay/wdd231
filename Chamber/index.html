@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Bogotá Chamber of Commerce</title>
+
+    <meta name="description"
+            content="Explore the Bogotá Chamber of Commerce student project. Discover local businesses, events, weather, and membership opportunities.">
+    <meta name="author" content="Harry Quimbay">
+
+    <meta property="og:title"
+            content="Home | Bogotá Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+            content="Connect with Bogotá businesses, discover events, and explore membership opportunities.">
+    <meta property="og:image"
+            content="https://harryquimbay.github.io/wdd231/chamber/images/bogota-og.jpg">
+    <meta property="og:url"
+            content="https://harryquimbay.github.io/wdd231/chamber/index.html">
+
+    <link rel="icon"
+            href="images/bgt_favicon.svg"
+            type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="branding"
+                href="index.html"
+                aria-label="Bogotá Chamber of Commerce home">
+
+                <img src="images/bgt_logo.svg"
+                        alt="Bogotá Chamber of Commerce logo"
+                        width="60"
+                        height="60">
+
+                <span class="brand-text">
+                    <strong>Bogotá</strong>
+                    <span>Chamber of Commerce</span>
+                </span>
+            </a>
+
+            <button id="menu"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navigation">
+                ☰
+            </button>
+        </div>
+
+        <nav id="navigation" aria-label="Main navigation">
+            <a href="index.html"
+                class="active"
+                aria-current="page">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <section class="hero" aria-label="Welcome to Bogotá">
+            <img src="images/bgta_hero.webp"
+                    alt="Panoramic view of Bogotá, Colombia"
+                    width="1200"
+                    height="600"
+                    fetchpriority="high">
+
+            <div class="hero-content">
+                <h1>Grow Your Business in Bogotá</h1>
+                <p>
+                    Connecting businesses, opportunities,
+                    and communities across our city.
+                </p>
+                <a href="join.html" class="hero-cta">
+                    Join the Chamber
+                </a>
+            </div>
+        </section>
+
+        <section class="home-information"
+                    aria-label="Chamber news and weather">
+
+            <div class="events-panel">
+                <h2>Current Events</h2>
+
+                <article class="event-item">
+                    <h3>Business Networking</h3>
+                    <p>
+                        Connect with entrepreneurs and business
+                        leaders throughout Bogotá.
+                    </p>
+                </article>
+
+                <article class="event-item">
+                    <h3>Entrepreneurship Workshops</h3>
+                    <p>
+                        Explore learning opportunities focused
+                        on innovation and business growth.
+                    </p>
+                </article>
+            </div>
+
+            <div class="weather-panel">
+                <h2>Current Weather</h2>
+                <p class="weather-location">Bogotá, Colombia</p>
+
+                <div class="current-weather">
+                    <img id="weather-icon"
+                            src="images/bgt_view.svg"
+                            alt=""
+                            width="64"
+                            height="64"
+                            hidden>
+
+                    <p id="current-temp">Loading weather...</p>
+                    <p id="weather-description"></p>
+                </div>
+            </div>
+
+            <div class="forecast-panel">
+                <h2>3-Day Forecast</h2>
+
+                <div id="forecast">
+                    <p>Loading forecast...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="spotlights-section"
+                    aria-labelledby="spotlights-heading">
+
+            <h2 id="spotlights-heading">Member Spotlights</h2>
+
+            <p class="spotlights-intro">
+                Discover some of the businesses featured
+                in our Bogotá Chamber directory.
+            </p>
+
+            <div id="spotlights" class="spotlights-grid"
+                    aria-live="polite">
+                <p>Loading featured businesses...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <div class="footer-contact">
+                <h2>Bogotá Chamber of Commerce</h2>
+                <p>Bogotá, Colombia</p>
+                <p>Academic website project for WDD 231.</p>
+                <p>
+                    Not affiliated with the official
+                    Chamber of Commerce.
+                </p>
+            </div>
+
+            <div class="footer-social">
+                <h2>Project Information</h2>
+                <a href="https://github.com/harryquimbay/wdd231"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View Project on GitHub
+                </a>
+            </div>
+
+            <div class="footer-development">
+                <p>WDD 231 – Frontend Web Development I</p>
+                <p>Harry Quimbay</p>
+                <p>
+                    &copy; <span id="currentyear"></span>
+                    Bogotá Chamber of Commerce
+                </p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
