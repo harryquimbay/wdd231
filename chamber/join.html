@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join Us | Bogotá Chamber of Commerce</title>
+    <meta name="description" content="Apply for membership with the Bogotá Chamber of Commerce. Explore our NP, Bronze, Silver, and Gold membership benefits.">
+    <meta name="author" content="Harry Quimbay">
+
+    <meta property="og:title" content="Join the Bogotá Chamber of Commerce">
+    <meta property="og:description" content="Become part of Bogotá's business community. Explore membership levels and apply online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harryquimbay.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://harryquimbay.github.io/wdd231/chamber/images/bgta_hero.webp">
+
+    <link rel="icon" href="images/bgt_favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+        <a class="branding" href="index.html" aria-label="Bogotá Chamber of Commerce home">
+            <img src="images/bgt_logo.svg" alt="Bogotá Chamber of Commerce logo" width="48" height="48">
+            <div class="brand-text">
+            <strong>Bogotá</strong>
+            <span>Chamber of Commerce</span>
+            </div>
+        </a>
+
+        <button id="menu" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation">
+            ☰
+        </button>
+        </div>
+
+    <nav id="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html" class="active" aria-current="page">Join</a>
+        <a href="discover.html">Discover</a>
+    </nav>
+</header>
+
+<main class="join-main">
+    <div class="join-intro">
+        <h1>Join the Bogotá Chamber</h1>
+        <p>
+            Connect with Bogotá's business community, discover new opportunities,
+            and access resources designed to support your organization's growth.
+        </p>
+    </div>
+
+    <div class="join-layout">
+        <section class="application-section" aria-labelledby="application-heading">
+            <h2 id="application-heading">Membership Application</h2>
+            <p>Complete the form below to apply for chamber membership.</p>
+
+            <form id="membership-form" method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Applicant Information</legend>
+
+                <label for="first-name">
+                First Name <span aria-hidden="true">*</span>
+                <input
+                    type="text"
+                    id="first-name"
+                    name="firstName"
+                    title="Enter your first name"
+                    autocomplete="given-name"
+                    required
+                >
+                </label>
+
+            <label for="last-name">
+                Last Name <span aria-hidden="true">*</span>
+                <input
+                    type="text"
+                    id="last-name"
+                    name="lastName"
+                    title="Enter your last name"
+                    autocomplete="family-name"
+                    required
+                >
+            </label>
+
+            <label for="organization-title">
+                Organizational Title
+                <input
+                    type="text"
+                    id="organization-title"
+                    name="organizationTitle"
+                    title="Enter at least seven characters using letters, spaces, or hyphens"
+                    autocomplete="organization-title"
+                    pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-]{7,}"
+                >
+            </label>
+
+            <label for="email">
+                Email Address <span aria-hidden="true">*</span>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    title="Enter a valid email address"
+                    autocomplete="email"
+                    placeholder="example@email.com"
+                    required
+                >
+            </label>
+
+            <label for="phone">
+                Mobile Phone Number <span aria-hidden="true">*</span>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    title="Enter your mobile phone number"
+                    autocomplete="tel"
+                    required
+                >
+            </label>
+
+            <label for="organization">
+                Business or Organization Name <span aria-hidden="true">*</span>
+                <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    title="Enter the name of your business or organization"
+                    autocomplete="organization"
+                    required
+                >
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Membership Details</legend>
+
+            <label for="membership-level">
+                Membership Level
+                <select
+                    id="membership-level"
+                    name="membershipLevel"
+                    title="Choose a membership level"
+                    required
+                >
+                    <option value="" disabled selected>Select a membership</option>
+                    <option value="np">NP Membership — Free</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+
+            <label for="description">
+                Business or Organization Description
+                <textarea
+                    id="description"
+                    name="description"
+                    title="Describe your business or organization"
+                    rows="5"
+                    placeholder="Tell us about your organization..."
+                ></textarea>
+            </label>
+        </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+
+            <input
+                type="submit"
+                class="submit-button"
+                value="Submit Membership Application"
+            >
+            </form>
+    </section>
+
+    <aside class="membership-section" aria-labelledby="membership-heading">
+        <h2 id="membership-heading">Membership Levels</h2>
+        <p>Explore the benefits available at each membership level.</p>
+
+        <div class="membership-cards">
+            <article class="membership-card np-card">
+                <h3>NP Membership</h3>
+                <p>For nonprofit organizations.</p>
+                <p class="membership-price">Free</p>
+                <a href="#np-dialog" data-dialog="np-dialog">View Benefits</a>
+            </article>
+
+            <article class="membership-card bronze-card">
+                <h3>Bronze Membership</h3>
+                <p>Build your professional network.</p>
+                <p class="membership-price">COP 200,000 / year</p>
+                <a href="#bronze-dialog" data-dialog="bronze-dialog">View Benefits</a>
+            </article>
+
+            <article class="membership-card silver-card">
+                <h3>Silver Membership</h3>
+                <p>Expand your business visibility.</p>
+                <p class="membership-price">COP 400,000 / year</p>
+                <a href="#silver-dialog" data-dialog="silver-dialog">View Benefits</a>
+            </article>
+
+            <article class="membership-card gold-card">
+                <h3>Gold Membership</h3>
+                <p>Maximize your business opportunities.</p>
+                <p class="membership-price">COP 700,000 / year</p>
+                <a href="#gold-dialog" data-dialog="gold-dialog">View Benefits</a>
+            </article>
+        </div>
+    </aside>
+    </div>
+
+    <dialog id="np-dialog" class="membership-dialog" aria-labelledby="np-title">
+        <h2 id="np-title">NP Membership Benefits</h2>
+        <p>Designed for nonprofit organizations.</p>
+        <ul>
+            <li>Free annual membership</li>
+            <li>Access to community networking events</li>
+            <li>Organization listing in the business directory</li>
+            <li>Community development resources</li>
+        </ul>
+        <button type="button" class="close-dialog">Close</button>
+        </dialog>
+
+        <dialog id="bronze-dialog" class="membership-dialog" aria-labelledby="bronze-title">
+        <h2 id="bronze-title">Bronze Membership Benefits</h2>
+        <p>Annual membership: COP 200,000</p>
+        <ul>
+            <li>All basic networking opportunities</li>
+            <li>Business directory listing</li>
+            <li>Access to business training workshops</li>
+            <li>Discounts on selected chamber events</li>
+        </ul>
+        <button type="button" class="close-dialog">Close</button>
+        </dialog>
+
+        <dialog id="silver-dialog" class="membership-dialog" aria-labelledby="silver-title">
+        <h2 id="silver-title">Silver Membership Benefits</h2>
+        <p>Annual membership: COP 400,000</p>
+        <ul>
+            <li>All Bronze membership benefits</li>
+            <li>Additional event discounts</li>
+            <li>Priority access to training opportunities</li>
+            <li>Eligibility for homepage business spotlights</li>
+        </ul>
+        <button type="button" class="close-dialog">Close</button>
+        </dialog>
+
+        <dialog id="gold-dialog" class="membership-dialog" aria-labelledby="gold-title">
+        <h2 id="gold-title">Gold Membership Benefits</h2>
+        <p>Annual membership: COP 700,000</p>
+        <ul>
+            <li>All Silver membership benefits</li>
+            <li>Premium homepage spotlight opportunities</li>
+            <li>Exclusive networking events</li>
+            <li>Featured business promotion</li>
+            <li>Priority registration and event discounts</li>
+        </ul>
+        <button type="button" class="close-dialog">Close</button>
+        </dialog>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div>
+            <h2>Bogotá Chamber of Commerce</h2>
+            <p>Bogotá, Colombia</p>
+            <p>Supporting local businesses and community growth.</p>
+        </div>
+
+        <div class="footer-social">
+            <h2>Connect With Us</h2>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Business Directory</a>
+            <a href="join.html">Membership</a>
+        </div>
+
+        <div class="footer-development">
+            <p>WDD231 Chamber Project</p>
+            <p>&copy; <span id="currentyear"></span> Harry Quimbay</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+        </div>
+</footer>
+</body>
+</html>

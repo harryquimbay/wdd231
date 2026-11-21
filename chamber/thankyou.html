@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You | Bogotá Chamber of Commerce</title>
+
+    <meta
+        name="description"
+        content="Thank you for submitting your membership application to the Bogotá Chamber of Commerce."
+    >
+    <meta name="author" content="Harry Quimbay">
+
+    <meta property="og:title" content="Membership Application Confirmation | Bogotá Chamber">
+    <meta
+        property="og:description"
+        content="Thank you for your interest in joining the Bogotá Chamber of Commerce."
+    >
+    <meta property="og:type" content="website">
+    <meta
+        property="og:url"
+        content="https://harryquimbay.github.io/wdd231/chamber/thankyou.html"
+    >
+    <meta
+        property="og:image"
+        content="https://harryquimbay.github.io/wdd231/chamber/images/bgta_hero.webp"
+    >
+
+    <link rel="icon" href="images/bgt_favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+        <a
+            class="branding"
+            href="index.html"
+            aria-label="Bogotá Chamber of Commerce home"
+        >
+            <img
+            src="images/bgt_logo.svg"
+            alt="Bogotá Chamber of Commerce logo"
+            width="48"
+            height="48"
+            >
+
+            <div class="brand-text">
+            <strong>Bogotá</strong>
+            <span>Chamber of Commerce</span>
+            </div>
+        </a>
+
+        <button
+            id="menu"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="navigation"
+        >
+            ☰
+        </button>
+        </div>
+
+        <nav id="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html" class="active">Join</a>
+        <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <section class="thankyou-section" aria-labelledby="thankyou-title">
+        <div class="thankyou-header">
+            <h1 id="thankyou-title">Thank You for Applying!</h1>
+
+            <p>
+            Thank you for your interest in joining the Bogotá Chamber
+            of Commerce. Your membership application information
+            has been received by this demonstration page.
+            </p>
+        </div>
+
+        <div class="confirmation-card">
+            <h2>Application Summary</h2>
+
+            <p>
+            Below is the information you submitted through
+            the membership application form.
+            </p>
+
+            <dl class="confirmation-details">
+            <div>
+                <dt>First Name</dt>
+                <dd id="confirm-first-name"></dd>
+            </div>
+
+            <div>
+                <dt>Last Name</dt>
+                <dd id="confirm-last-name"></dd>
+            </div>
+
+            <div>
+                <dt>Email Address</dt>
+                <dd id="confirm-email"></dd>
+            </div>
+
+            <div>
+                <dt>Mobile Phone Number</dt>
+                <dd id="confirm-phone"></dd>
+            </div>
+
+            <div>
+                <dt>Business or Organization</dt>
+                <dd id="confirm-organization"></dd>
+            </div>
+
+            <div>
+                <dt>Application Date and Time</dt>
+                <dd id="confirm-timestamp"></dd>
+            </div>
+            </dl>
+
+            <a href="index.html" class="return-home">
+            Return to Homepage
+            </a>
+        </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+        <div>
+            <h2>Bogotá Chamber of Commerce</h2>
+            <p>Bogotá, Colombia</p>
+            <p>Supporting local businesses and community growth.</p>
+        </div>
+
+        <div class="footer-social">
+            <h2>Connect With Us</h2>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Business Directory</a>
+            <a href="join.html">Membership</a>
+        </div>
+
+        <div class="footer-development">
+            <p>WDD231 Chamber Project</p>
+            <p>
+            &copy; <span id="currentyear"></span> Harry Quimbay
+            </p>
+            <p>
+            <p><span id="lastModified"></span></p>
+            </p>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
