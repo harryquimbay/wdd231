@@ -1,0 +1,388 @@
+
+:root {
+    --charcoal: #202124;
+    --kanagawa-blue: #193b70;
+    --crimson: #b91c1c;
+    --kanagawa-sand: #e8c69c;
+    --light-sand: #f2d9bc;
+    --ivory: #f8f5ef;
+    --white: #ffffff;
+
+    --main-font: "Encode Sans Expanded", sans-serif;
+    --japanese-font: "Noto Sans JP", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--ivory);
+    color: var(--charcoal);
+    font-family: var(--main-font);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+[lang="ja"] {
+    font-family: var(--japanese-font);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--kanagawa-blue);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+h2 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--kanagawa-blue);
+}
+
+a:hover {
+    color: var(--crimson);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--crimson);
+    outline-offset: 4px;
+}
+
+.site-header {
+    padding: 2rem 1rem;
+    background-color: var(--charcoal);
+    color: var(--white);
+    text-align: center;
+    border-bottom: 5px solid var(--crimson);
+}
+
+.branding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.brand-name {
+    color: var(--white);
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+.japanese-name {
+    color: var(--kanagawa-sand);
+    font-family: var(--japanese-font);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.site-header p {
+    margin: 1rem 0 0;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+.page-intro {
+    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+    background-color: var(--kanagawa-sand);
+    border-radius: 12px;
+}
+
+.page-intro .eyebrow {
+    color: var(--crimson);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-intro h1 {
+    margin: 0.75rem 0 1rem;
+}
+
+.page-intro p:last-child {
+    max-width: 75ch;
+    margin-bottom: 0;
+}
+
+.plan-section {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--kanagawa-sand);
+    border-radius: 12px;
+}
+
+.plan-section h2 {
+    margin: 0 0 1.5rem;
+    padding-left: 0.75rem;
+    border-left: 5px solid var(--crimson);
+}
+
+.plan-section h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.plan-section p:last-child {
+    margin-bottom: 0;
+}
+
+.page-list,
+.scenario-list {
+    padding-left: 1.5rem;
+}
+
+.page-list li,
+.scenario-list li {
+    margin-bottom: 0.85rem;
+}
+
+.page-list li::marker,
+.scenario-list li::marker {
+    color: var(--crimson);
+}
+
+.page-list strong {
+    color: var(--kanagawa-blue);
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.color-card {
+    overflow: hidden;
+    padding: 1rem;
+    background-color: var(--ivory);
+    border: 1px solid var(--kanagawa-sand);
+    border-radius: 10px;
+}
+
+.color-swatch {
+    width: 100%;
+    height: 110px;
+    border: 1px solid var(--charcoal);
+    border-radius: 6px;
+}
+
+.color-card h3 {
+    margin: 1rem 0 0.4rem;
+    font-size: 1rem;
+}
+
+.color-card p {
+    font-size: 0.85rem;
+}
+
+.color-card .hex-code {
+    margin-bottom: 0.75rem;
+    color: var(--charcoal);
+    font-weight: 700;
+}
+
+.charcoal {
+    background-color: var(--charcoal);
+}
+
+.kanagawa-blue {
+    background-color: var(--kanagawa-blue);
+}
+
+.crimson {
+    background-color: var(--crimson);
+}
+
+.kanagawa-sand {
+    background-color: var(--kanagawa-sand);
+}
+
+.light-sand {
+    background-color: var(--light-sand);
+}
+
+.ivory {
+    background-color: var(--ivory);
+}
+
+.white {
+    background-color: var(--white);
+}
+
+.font-example {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--light-sand);
+    border-left: 4px solid var(--kanagawa-blue);
+    border-radius: 8px;
+}
+
+.font-example h3 {
+    margin-top: 0;
+}
+
+.font-example ul {
+    padding-left: 1.5rem;
+}
+
+.font-example li {
+    margin-bottom: 0.5rem;
+}
+
+.heading-example {
+    margin: 1rem 0;
+    color: var(--kanagawa-blue);
+    font-family: var(--main-font);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.body-example {
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.japanese-example {
+    margin: 1rem 0;
+    color: var(--kanagawa-blue);
+    font-family: var(--japanese-font);
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.wireframe {
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--ivory);
+    border: 1px solid var(--kanagawa-sand);
+    border-radius: 10px;
+}
+
+.wireframe h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.wireframe img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid var(--charcoal);
+    border-radius: 6px;
+}
+
+.wireframe figcaption {
+    margin-top: 1rem;
+    color: var(--charcoal);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.site-footer {
+    padding: 2rem 1rem;
+    background-color: var(--kanagawa-blue);
+    color: var(--white);
+    border-top: 5px solid var(--kanagawa-sand);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+}
+
+.site-footer span {
+    color: var(--kanagawa-sand);
+}
+
+@media (min-width: 500px) {
+    .color-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 2.5rem 1.5rem;
+    }
+
+.site-header {
+    padding: 2.5rem 1.5rem;
+}
+
+.page-intro {
+    padding: 3rem;
+}
+
+.plan-section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.color-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wireframe-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    align-items: start;
+    }
+}
+
+@media (min-width: 1024px) {
+.color-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.plan-section {
+    padding: 2.5rem;
+}
+
+.color-swatch {
+    height: 130px;
+    }
+}
